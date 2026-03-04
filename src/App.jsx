@@ -11,8 +11,9 @@ function App() {
   const [sortBy, setSortBy] = useState('tokensDesc')
 
   useEffect(() => {
+    const basePath = import.meta.env.BASE_URL.replace(/\/$/, '')
     Promise.all([
-      fetch('/data.json').then(res => res.json())
+      fetch(`${basePath}/data.json`).then(res => res.json())
     ]).then(([data]) => {
       setModels(data.models)
       setHardware(data.hardware)
