@@ -236,7 +236,9 @@ function App() {
       </div>
 
       <footer className="footer">
-        <p>Data collected from community benchmarks • Last updated: March 2025</p>
+      <a href="https://github.com/plebzZz/local-llms-performance" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github" aria-hidden="true"></i> GitHub Repository
+      </a>
       </footer>
     </div>
   )
