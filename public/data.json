@@ -57,7 +57,23 @@
     { "id": "phi-3-medium-14b", "name": "Phi-3 Medium 14B", "params": "14B", "family": "Phi" },
     { "id": "phi-4-mini-4b", "name": "Phi-4 Mini 4B", "params": "4B", "family": "Phi" },
     { "id": "phi-4-14b", "name": "Phi-4 14B", "params": "14B", "family": "Phi" },
-    { "id": "tinyllama-1b", "name": "TinyLlama 1B", "params": "1B", "family": "TinyLlama" }
+    { "id": "tinyllama-1b", "name": "TinyLlama 1B", "params": "1B", "family": "TinyLlama" },
+    { "id": "llama4-scout", "name": "Llama 4 Scout 109B (MoE)", "params": "109B", "family": "Llama" },
+    { "id": "llama4-maverick", "name": "Llama 4 Maverick 400B (MoE)", "params": "400B", "family": "Llama" },
+    { "id": "deepseek-v3.1", "name": "DeepSeek V3.1 671B (MoE)", "params": "671B", "family": "DeepSeek" },
+    { "id": "deepseek-v4-flash", "name": "DeepSeek V4 Flash 1.6T (MoE)", "params": "1.6T", "family": "DeepSeek" },
+    { "id": "deepseek-v4-pro", "name": "DeepSeek V4 Pro 1.6T (MoE)", "params": "1.6T", "family": "DeepSeek" },
+    { "id": "qwen3.5-27b", "name": "Qwen 3.5 27B", "params": "27B", "family": "Qwen" },
+    { "id": "qwen3.5-72b", "name": "Qwen 3.5 72B", "params": "72B", "family": "Qwen" },
+    { "id": "qwen3.5-122b", "name": "Qwen 3.5 122B (MoE)", "params": "122B", "family": "Qwen" },
+    { "id": "qwen3.5-397b", "name": "Qwen 3.5 397B (MoE)", "params": "397B", "family": "Qwen" },
+    { "id": "qwen3.6-27b", "name": "Qwen 3.6 27B", "params": "27B", "family": "Qwen" },
+    { "id": "gemma4-2b", "name": "Gemma 4 2B", "params": "2B", "family": "Gemma" },
+    { "id": "gemma4-26b", "name": "Gemma 4 26B (MoE)", "params": "26B", "family": "Gemma" },
+    { "id": "mistral-medium-3.5", "name": "Mistral Medium 3.5 675B (MoE)", "params": "675B", "family": "Mistral" },
+    { "id": "kimi-k2.5", "name": "Kimi K2.5 1T (MoE)", "params": "1T", "family": "Kimi" },
+    { "id": "glm-5", "name": "GLM-5 744B (MoE)", "params": "744B", "family": "GLM" },
+    { "id": "gpt-oss-120b", "name": "GPT-oss 120B", "params": "120B", "family": "OpenAI" }
   ],
   "hardware": [
     { "id": "m1", "name": "MacBook Air M1", "vendor": "Apple", "cores": "8 CPU + 7 GPU", "memory": "16GB", "year": 2020 },
@@ -103,6 +119,12 @@
     { "id": "rtx-5090", "name": "RTX 5090", "vendor": "NVIDIA", "cores": "21760 CUDA", "memory": "32GB", "year": 2025 },
     { "id": "a100-40gb", "name": "A100 40GB", "vendor": "NVIDIA", "cores": "6912 CUDA", "memory": "40GB", "year": 2020 },
     { "id": "a100-80gb", "name": "A100 80GB", "vendor": "NVIDIA", "cores": "6912 CUDA", "memory": "80GB", "year": 2020 },
-    { "id": "h100-80gb", "name": "H100 80GB", "vendor": "NVIDIA", "cores": "16896 CUDA", "memory": "80GB", "year": 2023 }
+    { "id": "h100-80gb", "name": "H100 80GB", "vendor": "NVIDIA", "cores": "16896 CUDA", "memory": "80GB", "year": 2023 },
+    { "id": "rtx-spark", "name": "NVIDIA RTX Spark", "vendor": "NVIDIA", "cores": "6144 CUDA + 20 Grace CPU", "memory": "128GB", "year": 2026 },
+    { "id": "rtx-pro-6000", "name": "RTX PRO 6000 Blackwell", "vendor": "NVIDIA", "cores": "24576 CUDA", "memory": "96GB", "year": 2025 },
+    { "id": "ryzen-ai-9-hx-370", "name": "AMD Ryzen AI 9 HX 370", "vendor": "AMD", "cores": "12 Zen 5 + 16 RDNA 3.5", "memory": "32GB", "year": 2025 },
+    { "id": "ryzen-ai-9-hx-375", "name": "AMD Ryzen AI 9 HX 375", "vendor": "AMD", "cores": "12 Zen 5 + 16 RDNA 3.5", "memory": "32GB", "year": 2025 },
+    { "id": "ryzen-ai-9-hx-475", "name": "AMD Ryzen AI 9 HX 475", "vendor": "AMD", "cores": "12 Zen 5 + 16 RDNA 3.5", "memory": "32GB", "year": 2026 },
+    { "id": "ryzen-ai-max-395", "name": "AMD Ryzen AI Max+ 395", "vendor": "AMD", "cores": "16 Zen 5 + 40 RDNA 3.5", "memory": "128GB", "year": 2025 }
   ]
 }

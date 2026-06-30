@@ -17,12 +17,16 @@ function App() {
       setHardware(data.hardware)
       
       const sizeFactors = {
+        '26b': 0.13, '27b': 0.12, '32b': 0.1,
+        '34b': 0.09, '35b': 0.085, '36b': 0.08, '44b': 0.06, '56b': 0.04, '70b': 0.035,
+        '72b': 0.034, '109b': 0.025, '120b': 0.022, '122b': 0.021, '176b': 0.012,
+        '236b': 0.008, '397b': 0.0045, '400b': 0.004, '405b': 0.004,
+        '671b': 0.002, '675b': 0.0018, '744b': 0.0015,
+        '1t': 0.0012, '1.6t': 0.001,
         '0.5b': 1.5, '0.6b': 1.5, '1b': 1.3, '1.1b': 1.3, '1.5b': 1.2, '1.6b': 1.2,
         '1.8b': 1.1, '2b': 1.0, '3b': 0.85, '3.8b': 0.8, '4b': 0.75, '4.7b': 0.7,
         '7b': 0.55, '8b': 0.5, '9b': 0.45, '12b': 0.35, '13b': 0.32, '14b': 0.3,
-        '16b': 0.25, '20b': 0.2, '21b': 0.18, '24b': 0.15, '27b': 0.12, '32b': 0.1,
-        '34b': 0.09, '35b': 0.085, '36b': 0.08, '44b': 0.06, '56b': 0.04, '70b': 0.035,
-        '72b': 0.034, '176b': 0.012, '236b': 0.008, '405b': 0.004, '671b': 0.002,
+        '16b': 0.25, '20b': 0.2, '21b': 0.18, '24b': 0.15,
       }
       const hwPerf = {
         'm1': 15, 'm1-pro': 35, 'm1-max': 65, 'm1-ultra': 120,
@@ -38,6 +42,9 @@ function App() {
         'rtx-5060': 28, 'rtx-5060-ti': 35, 'rtx-5070': 50, 'rtx-5070-ti': 65,
         'rtx-5080': 85, 'rtx-5090': 140,
         'a100-40gb': 75, 'a100-80gb': 85, 'h100-80gb': 130,
+        'rtx-spark': 85, 'rtx-pro-6000': 160,
+        'ryzen-ai-9-hx-370': 18, 'ryzen-ai-9-hx-375': 22,
+        'ryzen-ai-9-hx-475': 30, 'ryzen-ai-max-395': 50,
       }
       
       const benchmarks = []
@@ -85,7 +92,7 @@ function App() {
     <div className="app">
       <header className="header">
         <h1>Local LLM Benchmarks</h1>
-        <p className="subtitle">Performance comparison of Qwen3, DeepSeek, Llama3 on Apple Silicon & NVIDIA GPUs</p>
+        <p className="subtitle">Performance comparison of Qwen, DeepSeek, Llama 4, Gemma 4, Mistral on Apple Silicon, NVIDIA & AMD AI hardware</p>
       </header>
 
       <div className="filters">
@@ -145,7 +152,7 @@ function App() {
                 </div>
                 <div className="bar-container">
                   <div 
-                    className={`bar ${b.hardware?.vendor === 'Apple' ? 'apple' : 'nvidia'}`}
+                    className={`bar ${b.hardware?.vendor === 'Apple' ? 'apple' : b.hardware?.vendor === 'AMD' ? 'amd' : 'nvidia'}`}
                     style={{ width: `${(b.tokensPerSecond / getMaxTokens()) * 100}%` }}
                   >
                     <span className="bar-value">{b.tokensPerSecond} tok/s</span>

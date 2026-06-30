@@ -6,6 +6,7 @@
   --text-secondary: #8b949e;
   --accent-apple: #a8b9cf;
   --accent-nvidia: #76b900;
+  --accent-amd: #ed1c24;
   --border-color: #30363d;
   --highlight: #238636;
 }
@@ -215,6 +216,10 @@ section h2 {
   background: linear-gradient(90deg, var(--accent-nvidia), #9ad600);
 }
 
+.bar.amd {
+  background: linear-gradient(90deg, var(--accent-amd), #ff4d4d);
+}
+
 .bar-value {
   font-size: 0.85rem;
   font-weight: 600;
@@ -284,6 +289,11 @@ section h2 {
   color: var(--accent-nvidia);
 }
 
+.vendor-badge.amd {
+  background: rgba(237, 28, 36, 0.2);
+  color: var(--accent-amd);
+}
+
 .tokps-cell {
   font-weight: 700;
   font-size: 1.1rem;
@@ -312,6 +322,10 @@ section h2 {
 
 .hardware-card.nvidia {
   border-left: 4px solid var(--accent-nvidia);
+}
+
+.hardware-card.amd {
+  border-left: 4px solid var(--accent-amd);
 }
 
 .hardware-card h3 {
