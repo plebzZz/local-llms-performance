@@ -50,7 +50,7 @@ function App() {
       const benchmarks = []
       let id = 1
       data.models.forEach(model => {
-        const paramKey = Object.keys(sizeFactors).find(k => model.params.toLowerCase().includes(k))
+        const paramKey = Object.keys(sizeFactors).sort((a, b) => b.length - a.length).find(k => model.params.toLowerCase().includes(k))
         const sizeFactor = paramKey ? sizeFactors[paramKey] : 0.1
         data.hardware.forEach(hw => {
           const basePerf = hwPerf[hw.id] || 30
